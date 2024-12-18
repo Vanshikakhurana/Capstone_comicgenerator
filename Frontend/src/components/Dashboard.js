@@ -10,27 +10,6 @@ function DashboardPage() {
 
   const handlePublishClick = () => navigate("/publish");
   const handleVoteNowClick = () => navigate('/community');
-  const fetchTotalVotes = async () => {
-    try {
-      const response = await fetch("http://localhost:3000/getvote", {
-        method: "GET",
-        headers: {
-          "Authorization": `Bearer ${localStorage.getItem("token")}`,
-          "Content-Type": "application/json",
-        },
-      });
-      console.log(response);
-      if (!response.ok) {
-        throw new Error("Failed to fetch votes");
-      }
-      const data = await response.json();
-      alert(`Your total Votes: ${data.totalVotes}`);
-    } catch (error) {
-      console.error("Error fetching total votes:", error);
-      alert("Error fetching total votes. Please try again.");
-    }
-  };
-
   const carouselItems = [
     {
       title: "Mirza and Sahiba",
@@ -149,7 +128,7 @@ function DashboardPage() {
             <div
               key={index}
               className="genre-card"
-              onClick={() => navigate(`/genres/${genre.name.toLowerCase()}`)}
+              onClick={() => navigate(`/genre/${genre.name.toLowerCase()}`)}
             >
               <span className="genre-name">{genre.name}</span>
               <span className="genre-icon">{genre.icon}</span>

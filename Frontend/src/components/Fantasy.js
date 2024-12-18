@@ -45,7 +45,7 @@ const Fantasy = () => {
 
     return (
         <div>
-            <h1 style={{ textAlign: "center" }}>Community</h1>
+            <h1 style={{ textAlign: "center" }}>Fantasy Comics</h1>
             <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',

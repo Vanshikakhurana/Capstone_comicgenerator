@@ -45,7 +45,7 @@ const SciFi = () => {
 
     return (
         <div>
-            <h1 style={{ textAlign: "center" }}>Community</h1>
+            <h1 style={{ textAlign: "center" }}>Sci-Fi Comics</h1>
             <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',

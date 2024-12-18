@@ -45,7 +45,7 @@ const Mystery = () => {
 
     return (
         <div>
-            <h1 style={{ textAlign: "center" }}>Community</h1>
+            <h1 style={{ textAlign: "center" }}>Mystery Comics</h1>
             <div style={{
                 display: 'flex',
                 flexWrap: 'wrap',

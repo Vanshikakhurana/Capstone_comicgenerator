@@ -14,6 +14,11 @@ import Popular from './components/popular';
 import Liked from './components/Liked';
 import New from './components/New';
 import Fantasy from './components/Fantasy';
+import Adventure from './components/Adventure';
+import Romance from './components/Romance';
+import Mystery from './components/Mystery';
+import Horror from './components/Horror';
+import SciFi from './components/Sci-Fi';
 import ProfilePage from "./components/Profile";
 function App() {
   return (
@@ -32,7 +37,12 @@ function App() {
         <Route path="/popular" element={<Popular />} /> 
         <Route path="/liked" element={<Liked />} /> 
         <Route path="/new" element={<New />} /> 
-        <Route path="/genre/fantasy" element={<Fantasy />} /> 
+        <Route path="/genre/fantasy" element={<Fantasy />} />
+        <Route path="/genre/romance" element={<Romance />} />
+        <Route path="/genre/adventure" element={<Adventure />} /> 
+        <Route path="/genre/mystery" element={<Mystery />} /> 
+        <Route path="/genre/horror" element={<Horror />} /> 
+        <Route path="/genre/scifi" element={<SciFi />} /> 
         <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </Router>

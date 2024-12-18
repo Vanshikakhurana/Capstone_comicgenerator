@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Slider from 'react-slick'; // Import react-slick
+// import Slider from 'react-slick'; // Import react-slick
 import './PublishPage.css';
 import 'slick-carousel/slick/slick.css'; // Import slick-carousel styles
 import 'slick-carousel/slick/slick-theme.css';
@@ -80,35 +80,35 @@ Split the scenario in multiple parts:`,
       setLoading(false);
     }
   };
-const images1 = [
-  "http://res.cloudinary.com/dfntvlmqc/image/upload/v1734541422/Arnavasharma4_be21%40thapar.edu_comic/monkey%20eating%20bananas/panel_1.png",
-  "http://res.cloudinary.com/dfntvlmqc/image/upload/v1734541486/Arnavasharma4_be21%40thapar.edu_comic/monkey%20eating%20bananas/panel_2.png",
-  "http://res.cloudinary.com/dfntvlmqc/image/upload/v1734541518/Arnavasharma4_be21%40thapar.edu_comic/monkey%20eating%20bananas/panel_3.png",
-  "http://res.cloudinary.com/dfntvlmqc/image/upload/v1734541538/Arnavasharma4_be21%40thapar.edu_comic/monkey%20eating%20bananas/panel_4.png"
-]
-  // Carousel settings for react-slick
-  const settings = {
-    dots: true,
-    infinite: false, // Changed from true to false
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    adaptiveHeight: true, // Helps with varying image sizes
-    arrows: true, // Add navigation arrows
-    centerMode: false, // Ensure full image display
-    accessibility: true, // Improve keyboard navigation
-    draggable: true, // Allow mouse/touch dragging
-    swipeToSlide: true, // Enable swiping
-    responsive: [
-      {
-        breakpoint: 768, // Mobile breakpoint
-        settings: {
-          dots: true,
-          arrows: false // Hide arrows on smaller screens
-        }
-      }
-    ]
-  };
+// const images1 = [
+//   "http://res.cloudinary.com/dfntvlmqc/image/upload/v1734541422/Arnavasharma4_be21%40thapar.edu_comic/monkey%20eating%20bananas/panel_1.png",
+//   "http://res.cloudinary.com/dfntvlmqc/image/upload/v1734541486/Arnavasharma4_be21%40thapar.edu_comic/monkey%20eating%20bananas/panel_2.png",
+//   "http://res.cloudinary.com/dfntvlmqc/image/upload/v1734541518/Arnavasharma4_be21%40thapar.edu_comic/monkey%20eating%20bananas/panel_3.png",
+//   "http://res.cloudinary.com/dfntvlmqc/image/upload/v1734541538/Arnavasharma4_be21%40thapar.edu_comic/monkey%20eating%20bananas/panel_4.png"
+// ]
+//   // Carousel settings for react-slick
+//   const settings = {
+//     dots: true,
+//     infinite: false, // Changed from true to false
+//     speed: 500,
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     adaptiveHeight: true, // Helps with varying image sizes
+//     arrows: true, // Add navigation arrows
+//     centerMode: false, // Ensure full image display
+//     accessibility: true, // Improve keyboard navigation
+//     draggable: true, // Allow mouse/touch dragging
+//     swipeToSlide: true, // Enable swiping
+//     responsive: [
+//       {
+//         breakpoint: 768, // Mobile breakpoint
+//         settings: {
+//           dots: true,
+//           arrows: false // Hide arrows on smaller screens
+//         }
+//       }
+//     ]
+//   };
 
   return (
     <div className="publishpage-container">
@@ -234,7 +234,7 @@ const images1 = [
       <div className="publishpage-content">
         <div className="publishpage-output-section">
           <div className="publishpage-output-placeholder">
-
+          {message && <p className="publishpage-message">{message}</p>}
             {images.length > 0 ? (
                <ImageCarousel images={images} />
               // <Slider {...settings}>
